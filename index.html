@@ -1250,25 +1250,22 @@
     <!-- Contact Form -->
     <div class="contact-form-wrap reveal">
       <h3>Send Me a Message</h3>
-      <form action="https://formsubmit.co/rabbihossaintamal@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Portfolio Contact">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
+      <form id="contactForm">
         <div class="form-group">
           <label for="formName">Name</label>
-          <input type="text" name="Name" id="formName" required placeholder="Your name">
+          <input type="text" id="formName" required placeholder="Your name">
         </div>
         <div class="form-group">
           <label for="formEmail">Email</label>
-          <input type="email" name="Email" id="formEmail" required placeholder="your@email.com">
+          <input type="email" id="formEmail" required placeholder="your@email.com">
         </div>
         <div class="form-group">
           <label for="formSubject">Subject</label>
-          <input type="text" name="Subject" id="formSubject" required placeholder="What's this about?">
+          <input type="text" id="formSubject" required placeholder="What's this about?">
         </div>
         <div class="form-group">
           <label for="formMessage">Message</label>
-          <textarea name="Message" id="formMessage" required placeholder="Write your message here..."></textarea>
+          <textarea id="formMessage" required placeholder="Write your message here..."></textarea>
         </div>
         <div class="form-group">
           <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
@@ -1520,6 +1517,33 @@
   });
 
 
+  // ---- Contact Form ----
+  const contactForm = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('formName').value.trim();
+      const email = document.getElementById('formEmail').value.trim();
+      const subject = document.getElementById('formSubject').value.trim();
+      const message = document.getElementById('formMessage').value.trim();
+      if (!name || !email || !subject || !message) return;
+
+      const mailtoLink = 'mailto:rabbihossaintamal@gmail.com?subject=' +
+        encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+
+      const btn = contactForm.querySelector('button[type="submit"]');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Opening...';
+      btn.disabled = true;
+
+      window.location.href = mailtoLink;
+
+      formSuccess.style.display = 'block';
+      contactForm.reset();
+      setTimeout(() => { formSuccess.style.display = 'none'; btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message'; btn.disabled = false; }, 4000);
+    });
+  }
 </script>
 </body>
 </html>
