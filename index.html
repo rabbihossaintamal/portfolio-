@@ -242,7 +242,6 @@
     .hero-content { flex: 1.2; }
     .hero-visual { flex: 1; display: flex; justify-content: center; position: relative; }
 
-    /* Floating code symbols */
     .hero-float-icon {
       position: absolute;
       font-size: 1.3rem;
@@ -449,7 +448,6 @@
     .hero-social a:hover i { color: #fff; position: relative; z-index: 1; }
     .hero-social a:hover { border-color: transparent; transform: translateY(-3px); }
 
-    /* Cube with glow ring */
     .hero-visual .cube-wrapper {
       width: 320px;
       height: 320px;
@@ -512,7 +510,6 @@
     .cube-face.top    { transform: rotateX(90deg) translateZ(70px); }
     .cube-face.bottom { transform: rotateX(-90deg) translateZ(70px); }
 
-    /* Scroll indicator */
     .scroll-indicator {
       position: absolute;
       bottom: -60px;
@@ -539,7 +536,6 @@
       50% { opacity: 1; transform: translateX(-50%) translateY(4px); }
     }
 
-    /* Floating orbs around cube */
     .orb {
       position: absolute;
       border-radius: 50%;
@@ -854,6 +850,61 @@
     .contact-card .info .value { font-weight: 600; font-size: 0.9rem; word-break: break-word; }
     .contact-card.full { grid-column: 1/-1; max-width: 380px; margin: 0 auto; }
 
+    /* ===== CONTACT FORM ===== */
+    .contact-form-wrap {
+      max-width: 600px;
+      margin: 40px auto 0;
+    }
+    .contact-form-wrap h3 {
+      text-align: center;
+      margin-bottom: 28px;
+      font-size: 1.4rem;
+    }
+    .form-group {
+      margin-bottom: 18px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      color: var(--text);
+      font-size: 0.95rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color var(--transition), box-shadow var(--transition);
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-bg);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+    .form-group .btn {
+      width: 100%;
+      justify-content: center;
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      color: #22c55e;
+      font-weight: 500;
+    }
+
     /* ===== REFERENCE ===== */
     #reference { position: relative; z-index: 1; }
     .ref-card {
@@ -955,7 +1006,7 @@
 <header>
   <div class="container">
     <div class="header-inner">
-      <a href="#" class="logo"><span class="bracket">&lt;</span>RHT<span class="bracket"> /&gt;</span></a>
+      <a href="#" class="logo"><span class="bracket">&lt;</span>Rabbi Hossain Tamal<span class="bracket"> &gt;</span></a>
       <nav class="nav" id="nav">
         <a href="#about">About</a>
         <a href="#education">Education</a>
@@ -993,8 +1044,10 @@
         <a href="#projects" class="btn btn-secondary"><i class="fas fa-code"></i> View Work</a>
       </div>
       <div class="hero-social">
-        <a href="https://github.com/rabbihossain01" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/rabbihossain01" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/rabbihossaintamal" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rabbi-hossain-tamal" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.facebook.com/RabbiHossainTamal" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.pinterest.com/rabbihossaintamal" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
         <a href="mailto:rabbihossaintamal@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         <a href="tel:+8801732367040" aria-label="Phone"><i class="fas fa-phone-alt"></i></a>
       </div>
@@ -1148,7 +1201,7 @@
       <div class="cert-card reveal">
         <div class="icon"><i class="fas fa-certificate"></i></div>
         <h4>HTML & CSS Fundamentals</h4>
-        <p>Programming Hero</p>
+        <p>Department</p>
         <span class="badge">Verified</span>
       </div>
     </div>
@@ -1174,16 +1227,56 @@
       </div>
       <div class="contact-card reveal">
         <div class="icon"><i class="fab fa-linkedin-in"></i></div>
-        <div class="info"><div class="label">LinkedIn</div><div class="value">linkedin.com/in/rabbihossain01</div></div>
+        <div class="info"><div class="label">LinkedIn</div><div class="value">linkedin.com/in/rabbi-hossain-tamal</div></div>
+      </div>
+      <div class="contact-card reveal">
+        <div class="icon"><i class="fab fa-facebook-f"></i></div>
+        <div class="info"><div class="label">Facebook</div><div class="value">facebook.com/RabbiHossainTamal</div></div>
       </div>
       <div class="contact-card reveal">
         <div class="icon"><i class="fab fa-github"></i></div>
-        <div class="info"><div class="label">GitHub</div><div class="value">github.com/rabbihossain01</div></div>
+        <div class="info"><div class="label">GitHub</div><div class="value">github.com/rabbihossaintamal</div></div>
+      </div>
+      <div class="contact-card reveal">
+        <div class="icon"><i class="fab fa-pinterest-p"></i></div>
+        <div class="info"><div class="label">Pinterest</div><div class="value">pinterest.com/rabbihossaintamal</div></div>
       </div>
       <div class="contact-card reveal full">
         <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
         <div class="info"><div class="label">Location</div><div class="value">Uttara Sector 10, Dhaka</div></div>
       </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-wrap reveal">
+      <h3>Send Me a Message</h3>
+      <form action="https://formsubmit.co/rabbihossaintamal@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Portfolio Contact">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="form-group">
+          <label for="formName">Name</label>
+          <input type="text" name="Name" id="formName" required placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label for="formEmail">Email</label>
+          <input type="email" name="Email" id="formEmail" required placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label for="formSubject">Subject</label>
+          <input type="text" name="Subject" id="formSubject" required placeholder="What's this about?">
+        </div>
+        <div class="form-group">
+          <label for="formMessage">Message</label>
+          <textarea name="Message" id="formMessage" required placeholder="Write your message here..."></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <i class="fas fa-check-circle"></i> Message sent successfully! I'll get back to you soon.
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -1229,7 +1322,6 @@
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-  // Floating geometric shapes
   const shapes = [];
   const geometries = [
     new THREE.TorusGeometry(0.6, 0.25, 12, 24),
@@ -1267,7 +1359,6 @@
     shapes.push(mesh);
   }
 
-  // Particles
   const particleGeo = new THREE.BufferGeometry();
   const particleCount = 800;
   const pos = new Float32Array(particleCount * 3);
@@ -1284,7 +1375,6 @@
   const particles = new THREE.Points(particleGeo, particleMat);
   scene.add(particles);
 
-  // Mouse tracking
   let mouseX = 0, mouseY = 0;
   document.addEventListener('mousemove', (e) => {
     mouseX = (e.clientX / window.innerWidth) * 2 - 1;
@@ -1300,19 +1390,15 @@
   function animate() {
     requestAnimationFrame(animate);
     time += 0.01;
-
     shapes.forEach(m => {
       m.rotation.x += m.userData.rotSpeed.x;
       m.rotation.y += m.userData.rotSpeed.y;
       m.position.y = m.userData.baseY + Math.sin(time * m.userData.floatSpeed + m.userData.floatOffset) * 0.8;
     });
-
     particles.rotation.y += 0.0002;
-
     camera.position.x += (mouseX * 2 - camera.position.x) * 0.03;
     camera.position.y += (mouseY * 2 - camera.position.y) * 0.03;
     camera.lookAt(scene.position);
-
     renderer.render(scene, camera);
   }
   animate();
@@ -1325,10 +1411,10 @@
 
   // ---- Typing Effect ----
   const phrases = [
-    "CSE Student at IUBAT",
-    "Full-Stack Developer",
-    "Problem Solver",
-    "Tech Enthusiast"
+    "CSE Student at IUBAT....",
+    "Full-Stack Developer....",
+    "Problem Solver....",
+    "Tech Enthusiast...."
   ];
   let phraseIdx = 0, charIdx = 0, isDeleting = false;
   const typeEl = document.getElementById('typingText');
@@ -1426,14 +1512,14 @@
   }, { threshold: 0.3 });
   document.querySelectorAll('.skill-card').forEach(el => skillObserver.observe(el));
 
-
-
   // Cursor glow
   const glow = document.getElementById('cursorGlow');
   document.addEventListener('mousemove', (e) => {
     glow.style.left = e.clientX + 'px';
     glow.style.top = e.clientY + 'px';
   });
+
+
 </script>
 </body>
 </html>
